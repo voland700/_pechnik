@@ -1,0 +1,100 @@
+@import "vars"
+
+.showcase
+	margin-top: 70px
+
+.showcase__list 
+	width: 970px
+	margin: 0 auto
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+
+.showcase_item
+	display: block
+	width: 228px 
+	background-color: #fff
+	border-radius: 3px
+	box-shadow: 0 0 3px rgba(122, 122, 122, 0.5)
+	margin: 7px
+	cursor: pointer
+	&:hover
+		box-shadow: 0 0 6px rgba(122, 122, 122, 0.8)
+		transition: 0.3s
+		
+
+.showcase_img
+	width: 180px
+	height: 180px
+	margin: 15px auto 10px auto
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+
+.showcase__title
+	font-size: .9em
+	line-height: 1.15
+	text-transform: uppercase
+	text-align: center
+	padding: 0 10px
+	margin-top: 15px
+	margin-bottom: 20px
+	a 
+		color: #414751
+		text-decoration: none
+		transition: 0.3s
+.showcase_item:hover .showcase__title a
+	color: #444
+	transition: 0.3s
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.showcase__list 
+		width: 930px
+	.showcase_item
+		width: 218px 
+	.showcase_img 
+		width: 170px
+		height: 170px
++media-breakpoint-down(md)
+	.showcase__list 
+		width: 690px
+	.showcase_item
+		width: 216px 
++media-breakpoint-down(sm)
+	.showcase__list 
+		width: 484px
+	.showcase_item
+		width: 228px 
++media-breakpoint-down(xs)
+	.showcase__list 
+		width: 100%
+	.showcase_item
+		width: 47% 
+	.showcase_img 
+		width: 170px
+		height: 170px
+@media only screen and (max-width : 497px)
+	.showcase__list
+		justify-content: space-between
+		margin: 7px 0
+	.showcase_item
+		width: 46% 
+	.showcase_img 
+		width: 150px
+		height: 150px
+@media only screen and (max-width : 400px)
+	.showcase_item
+		width: 45.5% 
+	.showcase_img 
+		width: 135px
+		height: 135px
+@media only screen and (max-width : 350px)
+	.showcase__list
+		justify-content: center
+	.showcase_item
+		width: 218px 
+	.showcase_img 
+		width: 170px
+		height: 170px

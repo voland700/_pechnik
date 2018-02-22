@@ -1,0 +1,323 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "font-awesome-min"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fbfaf8
+	color: $darck
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+#exper
+	height: 75px
+	border: 1px solid blue 
+	border-radius: 3px
+	h3 
+		text-align: center
+
+
+.topnav
+	background-color: $darck
+.topnav-wrap
+	display: flex
+	flex-direction: row 
+	justify-content: flex-start
+.topnav-home-wrap
+	padding-top: 1px    
+.topnav-home
+	font-size: 24px
+	display: block
+	padding: 7px 15px
+	line-height: 20px
+	transition: all .25s
+	color: #fff
+	&:hover
+		background-color: $accent
+		color: $darck
+		text-decoration: none
+		transition: all .25s
+
+.topnav-list
+	display: flex
+	flex-direction: row
+	padding-bottom: 1px
+	padding-top: 1px
+	margin: 0
+	padding-left: 0
+.topnav-list li
+	list-style: none
+.topnav-item 
+	color: #fff
+
+.topnav-item
+	font-size: 0.9em
+	display: block
+	padding: 9px 15px
+	line-height: 20px
+	transition: all .25s
+	&:hover,
+	&:focus,
+	&:active
+		background-color: $accent
+		color: $darck
+		text-decoration: none
+		transition: all .25s
+
+.topnav_btn
+	display: none
+	width: 27px
+	height: 27px
+	margin: 5px 0
+	cursor: pointer
+	transition: all .27s
+
+.topnav_btn-close
+	background: url(../img/icon/burgers.svg) no-repeat transparent center
+
+.topnav_btn-open
+	background: url(../img/icon/closed.svg) no-repeat transparent center
+
+.head_wrap
+	display: flex
+	justify-content: space-between
+	width: 100%
+	padding-top: 15px
+
+.head_logo
+	width: 150px
+	margin-right: 20px
+.head_logo-img
+	width: 82px
+	margin-left: 12px
+	margin-bottom: 3px
+
+.head_logo-img:hover #y_logo 
+	fill: darken($accent, 5%)
+	transition: .3
+
+.head_logo-title
+	font-size: .9em
+	line-height: .9em
+	font-weight: 700
+	color: $darck
+	text-transform: uppercase
+	transition: .3s
+
+.head_logo:hover .head_logo-title
+	transition: .3s
+	background: -webkit-gradient(linear, left top, left bottom, from(#feb913), to(#f75821))
+	background: -webkit-linear-gradient(#feb913, #f75821)
+	background: -o-linear-gradient(#feb913, #f75821)
+	background: linear-gradient(#feb913, #f75821)
+	background-clip: text
+	color: transparent
+
+.head_info-wrap
+	width: 100%
+	display: flex
+	justify-content: space-between
+.head_info_main
+	width: 40%
+
+.head_info_main-phone
+	font-size: 40px
+	font-weight: 600
+	color: $darck
+	line-height: 40px
+	margin-bottom: 5px
+	i 
+		margin-right: 15px
+		font-size: .93em
+
+
+.head_info_main-time
+	font-size: 15px
+	margin-left: 50px
+	font-style: italic
+	line-height: 15px
+
+
+.btn_colme
+	display: block
+	width: 150px
+	margin: 10px 0 0 50px
+	padding: 2px 8px 4px 7px
+	border: 2px solid lighten($darck, 10%)
+	border-radius: 7px
+	background-image: url(../img/icon/сoll-center.svg)
+	background-repeat: no-repeat
+	background-size: 35px 25px
+	background-position: 5px center
+	box-shadow: 0 0 6px rgba(122,122,122,.1)	
+	cursor: pointer
+	transition: .3s
+
+.btn_colme:hover
+	border: 2px solid $accent
+	box-shadow: 0 0 6px rgba(122,122,122,.8)
+	transition: .3s
+
+
+
+.btn_colme-title
+	width: 	100%
+	display: block
+	text-align: center
+	padding-left: 35px
+	font-size: .75em
+	text-transform: uppercase
+	line-height: 1em
+	font-weight: 600
+
+.btn_colme-title-smol
+	width: 	100%
+	display: block
+	text-align: center
+	padding-left: 35px
+	font-size: .7em
+	line-height: 1em
+	font-weight: 400
+
+.head_info_ofice
+	width: 52%
+	color: $darck
+	margin-right: 25px
+
+.head_info_main-ofice
+	width: 100%
+	display: flex
+	flex-direction: row
+	flex-direction: space-between
+	flex-wrap: wrap
+	margin-bottom: 22px
+.head_info_ofice-title
+	width: 49%
+	font-size: 20px
+	line-height: 20px
+	font-weight: 600
+	margin-bottom: 7px
+
+
+.head_info_ofice-phone
+	width: 49%
+	font-size: 18px
+	line-height: 20px
+	text-align: right	
+	i 
+		margin-right: 7px
+		color: lighten($darck, 10%)
+
+.head_info_ofice-address
+	width: 100%
+	font-size: 14px
+	font-style: italic
+	line-height: 14px
+	i 
+		margin-right: 12px
+		color: lighten($darck, 10%)
+
+.head_basket
+	width: 150px
+.head_basket-img
+	width: 60px
+	margin: 0 auto 0 auto
+	position: relative
+	transition: .3s
+	a 
+		display: block
+
+.head_basket-img svg
+	fill: $darck
+	transition: .3s
+	cursor: pointer
+	&:hover
+		fill: $accent
+		transition: .3s
+		
+.head_basket-col
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-32%)
+	font-size: 1.2em
+	font-weight: 600
+	line-height: 14px
+	padding: 3px 5px
+	background-color: #fff
+	border: 2px solid $accent
+	border-radius: 50%
+	cursor: pointer
+
+.head_basket-sum
+	display: block
+	width: 100%
+	font-size: .9em
+	line-height: .9em
+	font-style: italic
+	text-align: center
+	margin: 3px auto 10px auto
+	color: $darck
+
+.head_basket-link
+	display: block
+	font-size: .73em
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	text-decoration: underline
+	color: $darck
+	cursor: pointer
+	line-height: .9em
+	margin-bottom: 3px
+	transition: .3s
+	&:hover
+		color: $accent
+		transition: .3s
+
+
+
+
+
+
+@import "media" // Always at the end
+
+@import "_search"
+@import "_ofer"
+@import "_showcase"
+@import "_advantages"
+@import "_work_block"
+@import "_mainArticle"
+@import "_footer"
+@import "_breadcrumb"
+@import "_leftMenu"
+@import "_product"

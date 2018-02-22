@@ -1,0 +1,117 @@
+@import "vars"
+
+.ofer
+	width: 100%
+	background-image: url(../img/images/bg-ofer.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center top
+	color: #fff
+	font-size: .95em
+	border-bottom: 1px solid $gray
+
+.ofer_wrap
+	display: flex
+	flex-direction: row 
+	justify-content: space-between
+	flex-wrap: wrap
+	padding-top: 15px
+	padding-bottom: 15px
+
+.ofer_100,
+.ofer_50
+	position: relative
+	border: 2px solid $gray
+	border-radius: 10px
+	background-color: rgba(79,90,108,.8)
+	padding: 15px
+	cursor: pointer
+	margin-bottom: 10px
+	transition: .3s
+	&:hover
+		border: 2px solid lighten($accent, 50%)
+		transition: .3s
+.ofer_100	
+	width: 100%	
+.ofer_50	
+	width: 549px
+
+.ofer_img-titl
+	position: absolute
+	left: -12px
+	top: 15px
+	z-index: 100
+
+.ofer_100_txt
+	padding-left: 250px
+	margin: 0
+.ofer_50_txt
+	margin-top: 35px
+	margin-bottom: 10px
+	text-indent: 30px
+
+
+.ofer_50_content-wrap
+	display: flex
+	flex-direction: row 
+	justify-content: space-between
+
+.ofer_50_content-txt-title
+	margin-bottom: 10px
+	span
+		text-transform: uppercase
+		font-size: 1.15em
+		padding-right: 7px
+		color: $accent
+		font-weight: 600
+
+.ofer_50_ui
+	list-style: none
+	margin-bottom: 10px
+	line-height: 1.55em
+	i 
+		color: $accent
+		margin-right: 7px
+
+.pll
+	padding-left: 40px
+.plr 
+	padding-left: 20px
+.ofer_50_content-img
+	width: 200px    
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.ofer_50
+		width: 459px
+	.ofer_50_content-img
+		width: 180px
+	.ofer_50_ui
+		font-size: .93em
+	.pll
+		padding-left: 20px
++media-breakpoint-down(md)
+	.ofer_100_txt
+		padding-left: 0
+		margin-top: 35px
+	.ofer_50
+		width: 100%
+	.ofer_50_ui
+		font-size: 1em
+	.ofer_50_content-img
+		order: 1
+	.ofer_50_content-txt
+		order: 2
+		width: 100%
+	.pll, .plr 
+		padding-left: 40px
++media-breakpoint-down(sm)
+	.ofer_50_content-img
+		display: none 
+
++media-breakpoint-down(xs)
+	.pll, .plr 
+		padding-left: 10px

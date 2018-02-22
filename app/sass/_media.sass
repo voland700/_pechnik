@@ -1,0 +1,175 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
+	.btn_colme_mob
+		display: none
++media-breakpoint-down(lg)
+	.topnav
+
+	.topnav-wrap
+		justify-content: space-between
+		align-items: flex-start
+
+	.topnav-item
+		font-size: 0.88em
+
+	.head_info_main-phone
+		font-size: 2.2em
+		line-height: .7em					
+	.head_info_main-time
+		font-size: .85em
+	.head_info_ofice-title
+		font-size: 1em
+		line-height: 1em
+	.head_info_ofice-phone
+		font-size: 1em
+		line-height: 1em
+
+	.head_info_ofice-address
+		font-size: .92em
+		line-height: .92em
+	.head_basket-sum
+		line-height: .9em
+		margin-bottom: 5px
++media-breakpoint-down(md)
+	.topnav-list
+		display: none
+		flex-direction: column
+		align-items: flex-start
+		flex-basis: 100%
+		li 
+			width: 100%
+			border-bottom: 1px solid darken($darck, 5%)
+			border-left: 1px solid darken($darck, 4%)
+			border-right: 1px solid darken($darck, 4%)
+	.topnav_btn
+		display: block
+		margin-left: 25px
+	.head_wrap
+		padding-bottom: 15px
+	.head_logo
+		width: 200px
+		margin-right: 0
+	.head_info_main
+		width: 100%
+	.head_info_ofice
+		display: none
+	.head_info_main-phone
+		text-align: center
+	.head_info_main-time
+		text-align: center
+		margin-left: 0
+	.btn_colme
+		margin: 10px auto 0 auto
+		background-color: lighten($body, 80%)
+	.head_basket
+		width: 190px
+	.head_basket-sum
+		margin-bottom: 7px;
+
+
++media-breakpoint-down(sm)
+	.head_logo
+		width: 21%
+		margin-right: 0
+	.head_logo-img
+		width: 100%
+		margin-left: 0
+		margin-bottom: 1px
+	.head_logo-title 
+		letter-spacing: .2em
+		font-size: .8em
+		line-height: 1em
+		font-weight: 600
+		text-align: center
+	.btn_colme_mob
+		display: none
+@media only screen and (max-width : 500px)
+	.head_wrap
+		padding-bottom: 5px
+	.head_logo
+		width: 17%
+	.head_wrap
+		flex-wrap: wrap
+	.head_logo-title
+		display: none
+	.head_basket-sum
+		display: none
+	.head_basket-link
+		display: none
+	.head_info-wrap
+		width: 83%
+	.head_info_main
+		width: 100%
+	.head_info_main-phone
+		text-align: right
+		i 
+			margin-right: 7px
+			color: lighten($darck, 25%)
+	.head_info_main-time
+		text-align: right	
+	.head_basket
+		width: 20%
+	.head_basket-img
+		width: 100%
+	.btn_colme
+		display: none
+	.btn_colme_mob
+		display: block
+		width: 158px
+		height: 35px
+		margin: 12px 0 0 0
+		padding: 2px 8px 4px 7px
+		border: 2px solid lighten($darck, 10%)
+		border-radius: 7px
+		background-color: lighten($body, 80%)
+		background-image: url(../img/icon/сoll-center.svg)
+		background-repeat: no-repeat
+		background-size: 35px 25px
+		background-position: 5px center
+		box-shadow: 0 0 6px rgba(122,122,122,.1)	
+		cursor: pointer
+		transition: .3s
+	.btn_colme_mob:hover
+		border: 2px solid $accent
+		box-shadow: 0 0 6px rgba(122,122,122,.8)
+		transition: .3s
+	.btn_colme_mob-title
+		width: 	100%
+		display: block
+		text-align: center
+		padding-left: 35px
+		font-size: .75em
+		text-transform: uppercase
+		line-height: 1em
+		font-weight: 600
+	.btn_colme_mob-title-smol
+		width: 	100%
+		display: block
+		text-align: center
+		padding-left: 35px
+		font-size: .7em
+		line-height: 1em
+		font-weight: 400
+@media only screen and (max-width : 350px)
+	.head_logo		
+		margin-bottom: 5px
+	.head_info_main-phone 
+		font-size: 1.9em
+	.head_info_main-time 
+		font-size: .8em
+
++media-breakpoint-down(xs)
+
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)
