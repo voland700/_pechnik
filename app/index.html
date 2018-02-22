@@ -289,28 +289,83 @@
 			<span class="product_info-price-profit">Ваша экономия: 2 070 руб.</span>
 
 
-			<div class="product_info-buy-wrap">
+			
 				<form action="#" method="post"  сlass="add_form">
-					<a href="javascript:void(0)">-</a>
-                        <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
-                    <a href="javascript:void(0)">+</a>
-				<input type="hidden" name="Nan">
-				<input type="hidden" name="none">
-				<!--
-				<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">  -->
-				<input type="submit" name="name-btn">
+					<div class="product_info-buy-wrap">
+					<div class="product_info-buy-form">
+						<a href="javascript:void(0)">-</a>
+	                        <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
+	                    <a href="javascript:void(0)">+</a>
+	                </div>
+					<input type="hidden" name="Nan">
+					<input type="hidden" name="none">
+					<!--
+					<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">  -->
+					<input type="submit" name="name-btn"  class="product-buy-btn" value="Купить">
+					<button data-module="buyoneclick" data-id="777" class="product-buy-btn" >Купить в 1 клик</button>
+					</div>
+
 				</form>
-
-			</div>	
-
-
 				
-		
+			<div class="product_gift">
+				<h3>Подарок к покупке</h3>
+				<div class="product_gift-wrap">
+					<div class="product_gift-img">
+						<img src="img/imgdel/tovar/drova.jpg">
+					</div>
+					<div class="product_gift-txt">
+						<ul>
+							<li>Упаковка сухих дров;</li>
+							<li>Бесплатное хранение до 6 месяцев;</li>
+							<li>Гарантия лучшей цены;</li>
+							<li>Скидка 20% на комплект дымохода.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="product_property">			
+				<dl><dt>Код товара:</dt><cpan class="dots"></cpan><dd>   23464</dd></dl>
+				<dl><dt>Производитель:</dt><cpan class="dots"></cpan><dd>    JOTUL</dd></dl>
+				<dl><dt>Страна производства:</dt><cpan class="dots"></cpan><dd>  Норвегия</dd></dl>
+				<dl><dt>Высота (мм):</dt><cpan class="dots"></cpan><dd>  707</dd></dl>
+				<dl><dt>Ширина (мм): </dt><cpan class="dots"></cpan><dd>   577</dd></dl>
+				<dl><dt>Глубина (мм): </dt><cpan class="dots"></cpan><dd>   484</dd></dl>
+				<dl><dt>Диаметр дымохода (мм): </dt><cpan class="dots"></cpan><dd>  150</dd></dl>
+				<dl><dt>Гарантия производителя: </dt><cpan class="dots"></cpan><dd>  25 лет</dd></dl>
+				<dl><dt>Мощность (кВт)</dt><cpan class="dots"></cpan><dd> 25</dd></dl>
+				<dl><dt>Вес (кг): </dt><cpan class="dots"></cpan><dd> 106</dd></dl>					
+			</div>
+		</div><!-- END ROW IMG and INFO -->
+
+
+		<section class="product_description">
+			<div class="tab_btn-wrap">
+				<div class="tab_btn tab_btn-active"><a href="#">Описание</a></div>
+				<div class="tab_btn"><a href="#">Документация</a></div>
+				<div class="tab_btn"><a href="#">Видео</a></div>
+			</div>
+
+			<div class="product_description-tab">
+				<p>Чугунная печь для бани Везувий Легенда Ковка 16 (205), с дверцей с жаропрочным стеклом Везувий 205, отапливает парную объемом 8 - 18 м3.</p>
+				<p>Преимущество печи в том, что топка печи состоит из 3-х элементов. На стыке между ними используется керамический шнур с рабочей температурой 1200 градусов. То есть топка печи абсолютно герметична! Для фиксации деталей между собой применяется болтовое соединение, что даёт 100% гарантию безопасности при эксплуатации.</p>
+				<h3>Преимущества покупки печи камина JOTUL</h3>
+				<p>Банная чугунная печь Легенда Ковка 16 (205) укомплектована чугунной герметичной дверцей Везувий 205 с жаропрочным стеклом «SHOT ROBAX». Конвекционно-вентилируемый кожух "Ковка" изготовлен из металлической текстурированной полосы покрашенной термостойкой краской и покрытая патиной «Бронза».</p>
+				<h4>Преимущества покупки печи камина JOTUL</h4>
+				<ul>
+					<li>Упаковка сухих дров;</li>
+					<li>Бесплатное хранение до 6 месяцев;</li>
+					<li>Гарантия лучшей цены;</li>
+					<li>Скидка 20% на комплект дымохода.</li>
+				</ul>
+			</div>
+
+
+		</section>
 
 
 
 
-		</div>
 
 
 
@@ -324,7 +379,7 @@
 
 
 
-	</div>
+	</div><!-- END ROW СТРАНИЦА-->	
 </div>
 
 

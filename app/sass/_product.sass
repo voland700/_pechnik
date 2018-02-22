@@ -222,9 +222,239 @@
 
 
 
+.product_info-buy-wrap
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	margin-top: 20px
+
+
+.product_info-buy-form
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	background-color: $gray
+	border-radius: 3px
+	width: 80px
+	height: 30px
+	input
+		width: 40px
+		height: 24px
+		text-align: center
+		border: 1px solid $gray
+		border-radius: 2px
+	a 
+		display: block
+		width: 20px
+		height: 24px
+		text-align: center
+		font-size: 1.3em
+		line-height: 1.1
+		color: #fff
+		ransition: 0.25s all
+		&:hover
+			text-decoration: none
+			color: $darck
+			ransition: 0.25s all
+
+.product-buy-btn
+	width: 150px
+	height: 40px
+	background-color: $darck
+	border: 2px solid $gray
+	border-radius: 10px
+	color: $accent
+	text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+	//color: #fff
+	font-size: 0.85em
+	font-weight: 600
+	text-transform: uppercase
+	cursor: pointer
+	ransition: 0.25s all
+	&:hover
+		ext-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
+		border: 2px solid $accent
+		ransition: 0.25s all
 
 
 
+.product_gift
+	width: 100%
+	padding: 10px 15px 15px 15px
+	margin-top: 30px
+	background-color: lighten($body, 2%)
+	border: 2px solid $gray
+	//border: 1px solid #ddd
+	border-radius: 5px
+
+	h3
+		line-height: 1
+		font-size: 1.1em
+		margin-bottom: 12px
+
+.product_gift-wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-start
+
+.product_gift-img
+	width: 70px
+	padding: 2px
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 2px
+	margin-right: 15px
+	img
+		width: 100%
+
+
+.product_gift-txt
+	font-size: .95em
+	line-height: 1.25
+	ul 
+		padding-left: 0
+		margin-bottom: 5px
+		li 
+			list-style: none
+	p
+		margin-bottom: 5px
+	i 
+		font-size: .86em
+		margin-right: 5px
+		opacity: .7
+
+
+.product_property
+	width: 100%	
+	font-size: .95em
+	line-height: 1.3
+	margin-top: 30px		
+	dl 
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+		margin-bottom: 0
+		margin-top: 3px
+		padding-right: 5px
+	dt
+		max-width: 60%
+		text-align: right
+	dd 
+		max-width: 39%
+		text-align: left
+		margin-bottom: 0
+.dots
+	flex-grow: 1
+	border-bottom: 1px dotted #dee0ee
+
+
+
+.product_description
+	width: 100%
+	line-height: 1.5
+	font-size: 1em
+	p 
+		margin-bottom: .8rem
+
+
+
+.tab_btn-wrap
+	margin-top: 30px
+	margin-bottom: 25px
+
+.tab_btn
+	position: relative 
+	display: inline-block
+	font-size: 1.2em
+	text-transform: uppercase
+	border: 1px solid $gray
+	background-color: transparent	
+	transition: all 0.15s ease 0s
+
+	a 
+		display: block
+		color: $darck
+		padding: 5px 25px
+		transition: all 0.15s ease 0s
+		&:hover 
+			text-decoration: none
+			background: transparent
+			position: relative
+			color: #fff
+			transition: all 0.15s ease 0s
+	&:hover
+		background-color: $gray
+		&:after, 
+		&:before 
+			top: 100%
+			left: 50%
+			border: solid transparent
+			content: " "
+			height: 0
+			width: 0
+			position: absolute
+			pointer-events: none
+			transition: all 0.15s ease 0s
+
+		&:after 
+			border-color: rgba(0, 0, 0, 0)
+			border-top-color: $gray
+			border-width: 10px
+			margin-left: -10px
+			transition: all 0.15s ease 0s
+
+		&:before 
+			border-color: rgba(74, 245, 96, 0)
+			border-top-color: $gray
+			border-width: 11px
+			margin-left: -11px
+			transition: all 0.15s ease 0s
+
+
+
+
+
+.tab_btn-active
+	background-color: $gray
+	position: relative
+	display: inline-block
+	font-size: 1.2em
+	text-transform: uppercase
+	border: 1px solid $gray
+	a
+		color: #fff
+
+	&:after, 
+	&:before 
+		top: 100%
+		left: 50%
+		border: solid transparent
+		content: " "
+		height: 0
+		width: 0
+		position: absolute
+		pointer-events: none
+		transition: all 0.15s ease 0s
+
+
+	&:after 
+		border-color: rgba(0, 0, 0, 0)
+		border-top-color: $gray
+		border-width: 10px
+		margin-left: -10px
+		transition: all 0.15s ease 0s
+
+	&:before 
+		border-color: rgba(74, 245, 96, 0)
+		border-top-color: $gray
+		border-width: 11px
+		margin-left: -11px
+		transition: all 0.15s ease 0s
 
 
 
