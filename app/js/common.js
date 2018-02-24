@@ -107,4 +107,6 @@ let imgPrew = document.getElementsByClassName('product_photo-prew-img');
 
 
 
+
+
 });

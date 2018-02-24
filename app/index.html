@@ -339,11 +339,11 @@
 		</div><!-- END ROW IMG and INFO -->
 
 
-		<section class="product_description">
+		<div class="product_description">
 			<div class="tab_btn-wrap">
-				<div class="tab_btn tab_btn-active"><a href="#">Описание</a></div>
-				<div class="tab_btn"><a href="#">Документация</a></div>
-				<div class="tab_btn"><a href="#">Видео</a></div>
+				<div class="tab_btn tab_btn-active"><a>Описание</a></div>
+				<div class="tab_btn"><a>Документация</a></div>
+				<div class="tab_btn"><a>Видео</a></div>
 			</div>
 
 			<div class="product_description-tab">
@@ -360,12 +360,53 @@
 				</ul>
 			</div>
 
+			<div class="product_description-tab">
+				<h3>Документация к пчам каминам JOTUL</h3>
+				<p>Скачать документацию к продукции JOTUL GROUP вы мжете на этой странице</p>
+			</div>
 
-		</section>
+			<div class="product_description-tab">
+				<div class="product_description-tab-video">
+					<div class="video-responsive">
+						<iframe src="https://www.youtube.com/embed/xevh27ud3Sw" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
 
+
+
+<script>	
+let tabBtn = document.querySelector(".tab_btn-wrap");
+
+tabBtn.onclick = function(event){
+	let target = event.target.parentElement;
+	let contentTab = document.querySelectorAll(".product_description-tab");
+	let tabBtnAll = tabBtn.children;
+
+	if(target.classList.contains("tab_btn")) {
+		for(let i=0; i< tabBtn.children.length; i++ ){
+
+			if(tabBtnAll[i] == target) {
+				if (!tabBtnAll[i].classList.contains("tab_btn-active")){
+					tabBtnAll[i].classList.add('tab_btn-active');
+				}	
+				contentTab[i].style.display='block';
+			} else {
+				contentTab[i].style.display='none';
+				if (tabBtnAll[i].classList.contains("tab_btn-active")){
+					tabBtnAll[i].classList.remove('tab_btn-active');
+				}	
+			}			
+		};
+	};
+
+}
+
+</script>
 
 
 
