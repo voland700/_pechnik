@@ -250,10 +250,18 @@
 		<div class="row">
 			
 			<!-- Блок с изображениями -->
-			<div class="col-lg-6 product_photo">
+			<div class="col-md-6 product_photo">
 				<div class="product_photo-img-wrap">
 					<a href="img/imgdel/tovar/1.jpg" class="product_photo-img-link" onclick="return false">
 						<img src="/img/imgdel/tovar/1.jpg" id="product_photo" alt="Печь камин" title="Печь камин">
+
+						<span class="product_stick-lebel">Новинка</span>
+						
+
+
+
+
+						<div class="product_stick-disc">-10%</div>
 					</a>					
 				</div>
 				<ul class="product_photo-prew-list">
@@ -276,7 +284,7 @@
 			</div>
 			<!-- END Блок с изображениями -->
 
-		<div class="col-lg-6">
+		<div class="col-md-6">
 			<div class="product_info-preview">
 				<p>Чугунная печь для бани Везувий Легенда Ковка 16 (205), с дверцей с жаропрочным стеклом Везувий 205, отапливает парную объемом  8 - 18 м<sup>3</sup>.</p>		
 			</div>
@@ -339,11 +347,11 @@
 		</div><!-- END ROW IMG and INFO -->
 
 
-		<div class="product_description">
+		<div class="col product_description">
 			<div class="tab_btn-wrap">
-				<div class="tab_btn tab_btn-active"><a>Описание</a></div>
-				<div class="tab_btn"><a>Документация</a></div>
-				<div class="tab_btn"><a>Видео</a></div>
+				<div class="tab_btn tab_btn-active"><a><i class="fa fa-file-text"></i>Описание</a></div>
+				<div class="tab_btn"><a><i class="fa fa-file"></i>Документация</a></div>
+				<div class="tab_btn"><a><i class="fa fa-file-video-o"></i>Видео</a></div>
 			</div>
 
 			<div class="product_description-tab" style="display: block;">
@@ -381,15 +389,12 @@
 
 <script>	
 let tabBtn = document.querySelector(".tab_btn-wrap");
-
 tabBtn.onclick = function(event){
 	let target = event.target.parentElement;
 	let contentTab = document.querySelectorAll(".product_description-tab");
 	let tabBtnAll = tabBtn.children;
-
 	if(target.classList.contains("tab_btn")) {
 		for(let i=0; i< tabBtn.children.length; i++ ){
-
 			if(tabBtnAll[i] == target) {
 				if (!tabBtnAll[i].classList.contains("tab_btn-active")){
 					tabBtnAll[i].classList.add('tab_btn-active');
@@ -403,9 +408,7 @@ tabBtn.onclick = function(event){
 			}			
 		};
 	};
-
 }
-
 </script>
 
 

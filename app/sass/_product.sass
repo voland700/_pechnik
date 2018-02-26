@@ -17,9 +17,11 @@
 	//box-shadow: 0 0 3px rgba(122,122,122,.5)
 	//border-radius: 3px
 .product_photo-img-link
+	position: relative
 	display: table-cell
 	vertical-align: middle
 	text-align: center
+	text-decoration: none
 	width: 100%
 	margin: 0px
 	padding: 0px
@@ -28,6 +30,34 @@
 		max-width: 390px
 		height: auto
 		max-height: 390px
+
+.product_stick-disc
+	position: absolute
+	bottom: 10px
+	right: 10px
+	width: 72px
+	height: 74px
+	background: url(../img/stick_disc.png) no-repeat center
+	color: #fff
+	text-align: center
+	text-shadow: 0 1px 0 #ba3434
+	font-weight: bold
+	font-size: 1.6em
+	line-height: 74px
+	line-height: 74px
+
+.product_stick-lebel
+	display: block
+	position: absolute
+	background: linear-gradient(to right, #c8c8ce 1%, #a7a7aa 94%,#7c7d7f 100%)
+	top: 15px
+	right: -0
+	padding: 3px 15px
+	background-color: $gray
+	font-size: .95em
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 0px 1px 0 $darck
 
 .product_photo-prew-list
 	width: 100%
@@ -54,6 +84,9 @@
 	cursor: pointer
 	&:hover 
 		border: 2px solid $gray
+
+.product_photo-prew-img-active
+	border: 2px solid $gray
 
 .product_photo-modal
 	position: fixed
@@ -370,14 +403,14 @@
 .tab_btn
 	position: relative 
 	display: inline-block
-	font-size: 1.2em
+	font-size: 1em
 	text-transform: uppercase
 	border: 1px solid $gray
 	background-color: transparent	
 	transition: all 0.15s ease 0s
 	cursor: pointer
 
-	a 
+	a:not([href]):not([tabindex]) 
 		display: block
 		color: $darck
 		padding: 5px 25px
@@ -388,6 +421,8 @@
 			position: relative
 			color: #fff
 			transition: all 0.15s ease 0s
+	i 
+		display: none
 	&:hover
 		background-color: $gray
 		&:after, 
@@ -416,18 +451,9 @@
 			margin-left: -11px
 			transition: all 0.15s ease 0s
 
-
-
-
-
 .tab_btn-active
 	background-color: $gray
-	position: relative
-	display: inline-block
-	font-size: 1.2em
-	text-transform: uppercase
-	border: 1px solid $gray
-	a
+	a:not([href]):not([tabindex])
 		color: #fff
 
 	&:after, 
@@ -469,7 +495,6 @@
 
 
 .product_description-tab-video
-	//background-color: lighten($body, 2%)
 	width: 80%
 	margin: 10px auto
 	background-color: #fff
@@ -479,12 +504,27 @@
 
 
 
+@media only screen and (max-width : 500px)
+	.tab_btn
+		a
+			font-size: 0
+			&:hover	
+		i 
+			display: block
+			font-size: 20px
+			padding: 3px 5px
+			color: $gray
 
-
-
+	.tab_btn-active
+		i 
+			color: #fff
 
 
 +media-breakpoint-down(xl)
+	.product-buy-btn
+		width: 120px
+		font-size: .8em
+		line-height: 1
 +media-breakpoint-down(lg)
 	.product_photo-modal-left
 		width: 29%
@@ -499,6 +539,8 @@
 		width: 19%
 	.product_photo-modal-wrap-photo
 		width: 60%
+	.product_description-tab-video
+		width: 90%
 +media-breakpoint-down(sm)
 	.product_photo-modal-left
 		width: 14%
@@ -506,4 +548,10 @@
 		width: 14%
 	.product_photo-modal-wrap-photo
 		width: 70%
+	.product-buy-btn
+		width: 120px
+		font-size: .87em
+		line-height: 1
+	.product_description-tab-video
+		width: 100%
 +media-breakpoint-down(xs)
