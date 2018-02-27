@@ -383,34 +383,143 @@
 		</div>
 
 
+<!--
+
+	<section class="col-12 recomend">
+		<h2 class="recomend-title">Сопутствующие товары:</h2>
+		<div class="recomend-wrap">
+			
+			<div class="recomend-item" onclick="location.href='/';">
+				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop1.jpg')"></div>
+				<div class="recomend-name">
+					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Дымоходы Schiedel</span></a></h3>		
+				</div>
+			</div>
+
+			<div class="recomend-item" onclick="location.href='/';">
+				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop2.jpg')"></div>				
+				<div class="recomend-name">
+					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Материалы для монтажа</span></a></h3>		
+				</div>
+			</div>
+
+			<div class="recomend-item" onclick="location.href='/';">
+				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop3.jpg')"></div>				
+				<div class="recomend-name">
+					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Баки для банни</span></a></h3>		
+				</div>
+			</div>	
+
+			<div class="recomend-item" onclick="location.href='/';">
+				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop4.jpg')"></div>				
+				<div class="recomend-name">
+					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Камни для банни</span></a></h3>		
+				</div>
+			</div>
+		
+		</div>
+	</section>
+-->
+
+	<section class="col-12 offer">
+		<h2 class="offer_title">Похожие товары:</h2>
+		
+		<div class="elements_wrap">	
+
+			<div class="element_item-wrap">
+				<div class="element">
+					<div class="element_img-wrap">
+						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-1.jpg')"></a>
+					</div>
+					<h3 class="element-title"><a href="#">Везувий Легенда Стандарт 12 (261)</a></h3>
+
+					<div class="element_add-wrap">
+						<div class="element_add-prise-wrap">							
+							<div class="catalog_add-prise-prise">15 860 руб.</div>						
+						</div>
+						<div class="element_add-buy">
+							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+
+			<div class="element_item-wrap">
+				<div class="element">
+					<div class="element_img-wrap">
+						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-2.jpg')"></a>
+					</div>
+					<h3 class="element-title"><a href="#">Везувий Легенда Ковка 22 (217)</a></h3>
+
+					<div class="element_add-wrap">
+						<div class="element_add-prise-wrap">
+							<div class="catalog_add-prise-prise">30 950 руб.</div>													
+						</div>
+						<div class="element_add-buy">
+							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+	
+
+			<div class="element_item-wrap">
+				<div class="element">
+					<div class="element_img-wrap">
+						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-3.jpg')"></a>
+					</div>
+					<h3 class="element-title"><a href="#">Везувий Легенда Стандарт 16 (ДТ-4С)</a></h3>
+
+					<div class="element_add-wrap">
+						<div class="element_add-prise-wrap">							
+							<div class="catalog_add-prise-prise">182 196 руб.</div>
+							<span class="catalog_add-prise-sale">214 349 руб.</span>						
+						</div>
+						<div class="element_add-buy">
+							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="element_item-wrap">
+				<div class="element">
+					<div class="element_img-wrap">
+						<div class="element_img-link">
+							<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-4.jpg')"></a>
+						</div>
+					</div>
+					<h3 class="element-title"><a href="#">Везувий Легенда Ковка 28 (270)</a></h3>
+
+					<div class="element_add-wrap">
+						<div class="element_add-prise-wrap">							
+							<div class="catalog_add-prise-prise">192 914 руб.</div>
+							<span class="catalog_add-prise-sale">214 349 руб.</span>						
+						</div>
+						<div class="element_add-buy">
+							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
+						</div>
+					</div>
+				</div>
+			</div>
 
 
 
 
-<script>	
-let tabBtn = document.querySelector(".tab_btn-wrap");
-tabBtn.onclick = function(event){
-	let target = event.target.parentElement;
-	let contentTab = document.querySelectorAll(".product_description-tab");
-	let tabBtnAll = tabBtn.children;
-	if(target.classList.contains("tab_btn")) {
-		for(let i=0; i< tabBtn.children.length; i++ ){
-			if(tabBtnAll[i] == target) {
-				if (!tabBtnAll[i].classList.contains("tab_btn-active")){
-					tabBtnAll[i].classList.add('tab_btn-active');
-				}	
-				contentTab[i].style.display='block';
-			} else {
-				contentTab[i].style.display='none';
-				if (tabBtnAll[i].classList.contains("tab_btn-active")){
-					tabBtnAll[i].classList.remove('tab_btn-active');
-				}	
-			}			
-		};
-	};
-}
-</script>
 
+
+
+
+
+
+		</div>
+	</section>
 
 
 
@@ -547,5 +656,19 @@ tabBtn.onclick = function(event){
 
 
 <script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	
+		var maxH = 0;
+		$(".recomend-name").each(function () {
+			var h_block = parseInt($(this).height());
+			if(h_block > maxH) {
+				maxH = h_block;
+			};
+		});
+		$(".recomend-name").height(maxH);
+	});
+</script>
+
+
 </body>
 </html>

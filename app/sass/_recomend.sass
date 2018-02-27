@@ -1,0 +1,115 @@
+@import "vars"
+
+
+.recomend
+	margin-top: 25px
+.recomend-title
+
+.recomend-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	background-color: darken($body, 10%)
+			
+.recomend-item
+	display: flex
+	flex-direction: column
+	width: 25%
+	background-color: #fff
+	margin: 7px
+	padding-bottom: 10px
+	border-radius: 1px
+	cursor: pointer
+	transition: all .35s ease 0s
+
+	&:hover .recomend-link 
+		color: $accent
+		text-decoration: none
+		transition: all .35s ease 0s
+
+
+.recomend-img
+	display: block
+	width: 145px
+	height: 145px
+	margin: 10px auto 15px auto
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+
+.recomend-name
+	display: flex
+	min-height: 50px    
+	background-color: $darck
+	border-radius: 1px
+	margin-right: 5px
+	margin-left: 5px
+	h3 
+		display: block
+		width: 1000%
+		margin:  auto 0
+
+.recomend-link
+	display: block
+	height: 100%
+	color: #fff
+	text-align: center
+	text-decoration: none
+	font-size: .75em
+	line-height: 1.25
+	padding: 4px 10px
+	text-transform: uppercase
+	display: flex
+	span 
+		display: block
+		margin: auto
+	&:active,
+	&:hover 
+		color: $accent
+		text-decoration: none
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.recomend-img
+		width: 125px
+		height: 125px
+	.recomend-link
+		font-size: .73em
++media-breakpoint-down(md)
+	.recomend-wrap
+		flex-wrap: wrap
+	.recomend-item
+		margin: 5px
+		width: 162px
+	.recomend-img
+		width: 120px
+		height: 120px
+	.recomend-link
+		font-size: .73em
++media-breakpoint-down(sm)
+	.recomend-item
+		width: 48%
+	.recomend-img
+		width: 150px
+		height: 150px
+	.recomend-link
+		font-size: .73em
+@media only screen and (max-width : 530px)
+	.recomend-item
+		width: 47%
+@media only screen and (max-width : 450px)
+	.recomend-img
+		width: 140px
+		height: 140px
+@media only screen and (max-width : 390px)
+	.recomend-img
+		width: 130px
+		height: 130px
+@media only screen and (max-width : 363px)
+	.recomend-item
+		width: 46%
+	.recomend-img
+		width: 110px
+		height: 110px
++media-breakpoint-down(xs)

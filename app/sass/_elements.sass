@@ -1,0 +1,73 @@
+@import "vars"
+
+.elements_wrap	
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	border-radius: 3px
+.element_item-wrap
+	width: 25% 
+	padding: 5px
+	background-color: darken($body, 10%)
+
+.element
+	background-color: #fff
+	border-radius: 1px
+	box-shadow: 0 0 1px rgba(122, 122, 122, 0.4)
+	&:hover 
+		box-shadow: 0 0 2px rgba(122, 122, 122, 0.7)
+
+.element_img-wrap
+	width: 100%
+	height: 190px
+
+.element_img-link
+	display: block
+	height: 100%
+	background-repeat: no-repeat
+	background-size: 160px auto
+	background-position: center center
+.element_img
+	width: auto
+	max-width: 180px
+	height: auto
+	max-height: 180px
+.element-title
+	font-size: .9em
+	font-weight: 600
+	text-align: center
+	padding: 0 5px 3px 5px
+	line-height: 1.25
+	margin-bottom: 1px
+	a 
+		color: $darck
+		&:hover 
+			text-decoration: none
+.element_add-wrap
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	width: 100%
+	background-color: $darck
+	padding: 5px
+	color: #fff
+.element_add-prise-wrap
+.catalog_add-prise-prise
+	line-height: 1.25
+.catalog_add-prise-sale
+	line-height: 1.2
+							
+.element_add-buy
+.element_add-buy-btn
+	border: 2px solid $accent
+	border-radius: 15px
+	background-color: $accent
+	font-size: 0.9em
+	padding: 1px 10px
+	cursor: pointer
+	transition: 0.25s all
+	&:hover 
+		background-color: $darck
+		color: $accent
+		transition: 0.25s all

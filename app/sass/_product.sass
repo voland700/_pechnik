@@ -305,11 +305,11 @@
 	font-weight: 600
 	text-transform: uppercase
 	cursor: pointer
-	ransition: 0.25s all
+	transition: 0.25s all
 	&:hover
 		ext-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
 		border: 2px solid $accent
-		ransition: 0.25s all
+		transition: 0.25s all
 
 
 
@@ -521,10 +521,6 @@
 
 
 +media-breakpoint-down(xl)
-	.product-buy-btn
-		width: 120px
-		font-size: .8em
-		line-height: 1
 +media-breakpoint-down(lg)
 	.product_photo-modal-left
 		width: 29%
@@ -532,6 +528,10 @@
 		width: 29%
 	.product_photo-modal-wrap-photo
 		width: 40%
+	.product-buy-btn
+		width: 120px
+		font-size: .8em
+		line-height: 1
 +media-breakpoint-down(md)
 	.product_photo-modal-left
 		width: 19%
@@ -549,9 +549,16 @@
 	.product_photo-modal-wrap-photo
 		width: 70%
 	.product-buy-btn
-		width: 120px
+		width: 150px
 		font-size: .87em
-		line-height: 1
+		margin-right: 10px
+
 	.product_description-tab-video
 		width: 100%
+	.product_info-buy-form
+		margin-right: 10px
+	.product_info-buy-wrap
+		justify-content: flex-start
 +media-breakpoint-down(xs)
+	.product_photo-img-link img
+		width: 100%
