@@ -23,11 +23,43 @@
 	height: 190px
 
 .element_img-link
+	position: relative
 	display: block
 	height: 100%
 	background-repeat: no-repeat
 	background-size: 160px auto
 	background-position: center center
+
+
+.element_disc
+	position: absolute
+	bottom: 0
+	right: 5px
+	display: block
+	width: 50px
+	height: 50px
+	background: url(../img/stick_disc.png) no-repeat center
+	background-size: 50px 50px
+	color: #fff
+	text-align: center
+	text-shadow: 0 1px 0 #ba3434
+	font-weight: 700
+	font-size: 1.1em
+	line-height: 50px
+
+.element-lebel
+	display: block
+	position: absolute
+	background: linear-gradient(to right,#c8c8ce 1%,#a7a7aa 94%,#7c7d7f 100%)
+	top: 7px
+	right: 0
+	padding: 2px 10px
+	background-color: $gray
+	font-size: .75em
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 0 1px 0 $darck
+
 .element_img
 	width: auto
 	max-width: 180px
@@ -49,14 +81,24 @@
 	flex-direction: row
 	justify-content: space-between
 	width: 100%
+	height: 53px
 	background-color: $darck
-	padding: 5px
+	padding: 7px
 	color: #fff
 .element_add-prise-wrap
+	height: 40px
 .catalog_add-prise-prise
-	line-height: 1.25
+	line-height: 1
+	font-size: 1em
+	font-weight: 600
+	margin-bottom: 4px
 .catalog_add-prise-sale
-	line-height: 1.2
+	display: block
+	line-height: 1
+	font-size: .85em
+	color: $accent
+	text-decoration: line-through
+	//font-style: italic
 							
 .element_add-buy
 .element_add-buy-btn
@@ -71,3 +113,122 @@
 		background-color: $darck
 		color: $accent
 		transition: 0.25s all
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.element_img-wrap
+		height: 160px
+	.element_img-link
+		background-size: 140px auto
+	.element-title 
+		font-size: .85em
+	.element_add-wrap
+		height: 48px
+	.element_add-buy-btn
+		font-size: .85em
+		padding: 0 8px
+	.catalog_add-prise-prise
+		font-size: .845em
+	.catalog_add-prise-sale
+		font-size: .78em
++media-breakpoint-down(md)
++media-breakpoint-down(sm)
+	.element_item-wrap 
+		width: 50%
+	.element_img-wrap
+		height: 190px
+	.element_img-link
+		background-size: 170px auto
+	.element-title 
+		font-size: .95em
+		min-height: 40px
+	.element_add-wrap
+		height: 53px
+		padding: 10px
+	.element_add-buy-btn
+		font-size: 1em
+		padding: 0 8px
+	.catalog_add-prise-prise
+		font-size: 1.05em
+	.catalog_add-prise-sale
+		font-size: .85em
+	.element_disc
+		width: 55px
+		height: 55px
+		background-size: 55px 55px
+		font-size: 1.1em
+		line-height: 55px
+
+@media only screen and (max-width : 450px)
+	.element_img-wrap
+		height: 170px
+	.element_img-link
+		background-size: 150px auto
+	.element-title 
+		font-size: .9em
+		min-height: auto
+	.element_add-wrap
+		height: auto
+		padding: 8px
+	.element_add-buy-btn
+		font-size: .9em
+		padding: 0 8px
+	.catalog_add-prise-prise
+		font-size: .97em
+	.catalog_add-prise-sale
+		font-size: .82em
+	.element_disc
+		width: 50px
+		height: 50px
+		background-size: 50px 50px
+		font-size: 1.1em
+		line-height: 50px	
+@media only screen and (max-width : 410px)
+	.element_add-buy-btn
+		position: relative
+		font-size: 0
+		width: 50px
+		height: 30px
+		background-image: url(../img/icon/basket.svg)
+		background-size: 35px 25px
+		background-position: 50% 50% 
+
+
+
+	.catalog_add-prise-prise
+		font-size: .97em
+	.catalog_add-prise-sale
+		font-size: .82em
+
+@media only screen and (max-width : 364px)
+	.element_item-wrap 
+		width: 100%
+	.element_img-wrap
+		height: 190px
+	.element_img-link
+		background-size: 170px auto
+	.element-title 
+		font-size: .95em
+		min-height: 40px
+	.element_add-wrap
+		height: 53px
+		padding: 10px
+	.element_add-buy-btn
+		font-size: 1em
+		padding: 0 8px
+		width: auto
+		height: auto
+		background-image: none
+		background-size: none
+	.catalog_add-prise-prise
+		font-size: 1.05em
+	.catalog_add-prise-sale
+		font-size: .85em
+	.element_disc
+		width: 55px
+		height: 55px
+		background-size: 55px 55px
+		font-size: 1.1em
+		line-height: 55px
++media-breakpoint-down(xs)
