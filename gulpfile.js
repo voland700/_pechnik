@@ -14,8 +14,8 @@ var gulp          = require('gulp'),
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		//'app/js/fontawesome-all.js',
+		//'app/libs/jquery/dist/jquery.min.js',
+		'app/js/jquery.fancybox.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

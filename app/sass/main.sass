@@ -2,6 +2,7 @@
 @import "fonts"
 @import "libs"
 @import "font-awesome-min"
+@import "jquery-fancybox-min"
 
 ::placeholder
 	color: #666
@@ -121,10 +122,6 @@ body
 	margin-left: 12px
 	margin-bottom: 3px
 
-.head_logo-img:hover #y_logo 
-	fill: darken($accent, 5%)
-	transition: .3
-
 .head_logo-title
 	font-size: .9em
 	line-height: .9em
@@ -133,14 +130,19 @@ body
 	text-transform: uppercase
 	transition: .3s
 
-.head_logo:hover .head_logo-title
-	transition: .3s
-	background: -webkit-gradient(linear, left top, left bottom, from(#feb913), to(#f75821))
-	background: -webkit-linear-gradient(#feb913, #f75821)
-	background: -o-linear-gradient(#feb913, #f75821)
-	background: linear-gradient(#feb913, #f75821)
-	background-clip: text
-	color: transparent
+.head_logo-hover
+	&:hover .head_logo-title
+		transition: .3s
+		background: -webkit-gradient(linear, left top, left bottom, from(#feb913), to(#f75821))
+		background: -webkit-linear-gradient(#feb913, #f75821)
+		background: -o-linear-gradient(#feb913, #f75821)
+		background: linear-gradient(#feb913, #f75821)
+		background-clip: text
+		color: transparent
+
+	&:hover .head_logo-img #y_logo 
+		fill: darken($accent, 5%)
+		transition: .3
 
 .head_info-wrap
 	width: 100%
@@ -174,7 +176,7 @@ body
 	padding: 2px 8px 4px 7px
 	border: 2px solid lighten($darck, 10%)
 	border-radius: 7px
-	background-image: url(../img/icon/сoll-center.svg)
+	background-image: url(../img/icon/phonecenter.svg)
 	background-repeat: no-repeat
 	background-size: 35px 25px
 	background-position: 5px center
@@ -321,6 +323,21 @@ body
 	width: 100%
 	height: 100%
 
+.center-block
+	display: block
+	margin-right: auto
+	margin-left: auto
+
+.img-thumbnail 
+	display: inline-block
+	max-width: 100%
+	height: auto
+	padding: 4px
+	line-height: 1.42857143
+	background-color: #fff
+	border: 1px solid #ddd
+	border-radius: 4px
+	transition: all .2s ease-in-out
 
 
 
@@ -340,3 +357,5 @@ body
 @import "_elements"
 @import "_catalog"
 @import "_pagination"
+@import "_noteList"
+@import "_examples"

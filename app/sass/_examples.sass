@@ -1,0 +1,72 @@
+@import "vars"
+
+.examples
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	width: 100%
+	margin-bottom: 20px
+
+.examples-item 
+	display: block
+	padding: 4px
+	line-height: 1.42857143
+	background-color: lighten($body, 1%)
+	border: 1px solid #ddd
+	border-radius: 4px
+	transition: all .2s ease-in-out
+	display: inline-block
+	max-width: 100%
+
+
+.examples-list-item 
+	display: block
+	padding: 4px
+	line-height: 1.42857143
+	background-color: lighten($body, 1%)
+	border: 1px solid #ddd
+	border-radius: 4px
+	transition: all .2s ease-in-out
+	display: inline-block
+	max-width: 100%	
+	
+.examples-img
+	width: 107px
+
+.examples-list-img
+	width: 93px
+
+.examples-txt
+	line-height: 1.5
+	font-size: 1em
+	text-align: justify
+	text-indent: 25px
+	a 
+		color:  $darck
+		font-style: italic
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.examples-img
+		width: 104px
+	.examples-list-img
+		width: 76px	
++media-breakpoint-down(md)
++media-breakpoint-down(sm)
+	.examples-img
+		width: 91px
+	.examples-list-item 
+		max-width: 20%
+	.examples-list-img
+		width: 100%			
++media-breakpoint-down(xs)
+	.examples-item 
+		max-width: 25%
+	.examples-img
+		width: 100%
+	.examples-list-item 
+		max-width: 25%
+	.examples-list-img
+		width: 100%	
+
+

@@ -1,15 +1,23 @@
 @import "vars"
 
-.category
-.category-wrap
 .category-element
-	margin-bottom: 25px
-.category-element-title
+	margin-bottom: 10px
+.category-element-title	
 	display: flex
 	flex-direction: row 
 	justify-content: space-between
-	a 
+	background-color: lighten($gray, 10%)
+	border-radius: 3px
+	margin-bottom: 2px
+	margin-right: 4px
+	h3 
+		flex-basis: 100%		
+		margin: 2px 0 3px 0
+
+	a 	
+		display: block
 		color: $darck
+		padding-left: 15px
 
 	//border: 1px solid $gray
 .category-element-btn 
@@ -31,7 +39,7 @@
 		display: block
 		width: 15px
 		height: 3px
-		background-color: $gray
+		background-color: darken($gray, 10%)
 .show 
 	display: block
 	opacity: 1
@@ -53,7 +61,7 @@
 		display: block
 		width: 15px
 		height: 3px
-		background-color: $gray
+		background-color: darken($gray, 10%)
 	&:after
 		content: ''
 		position: absolute
@@ -62,7 +70,7 @@
 		display: block
 		width: 15px
 		height: 3px
-		background-color: $gray
+		background-color: darken($gray, 10%)
 		transform: rotate(90deg)
 
 .category-item-list
@@ -141,7 +149,7 @@
 		font-size: .95em
 		line-height: 1.2
 
-@media only screen and (max-width : 540px)
+@media only screen and (max-width : 576px)
 	.category-item
 		width: 49.2%
 @media only screen and (max-width : 404px)

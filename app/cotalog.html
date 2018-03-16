@@ -447,6 +447,14 @@
 			</section>
 
 			<section class="category-element">
+				<div class="category-element-title"><h3><a href="#">Печи для бани</a></h3><span class="category-element-btn"></span></div>
+			</section>
+
+			<section class="category-element">
+				<div class="category-element-title"><h3><a href="#">Печи для бани</a></h3><span class="category-element-btn"></span></div>
+			</section>
+
+			<section class="category-element">
 				<div class="category-element-title"><h3><a href="#">Дымоходы</a></h3><span class="category-element-btn"></span></div>
 				<ul class="category-item-list">
 					<li class="category-item">						
@@ -508,12 +516,32 @@
 
 		</div>	
 
-<script type="text/javascript">
 
+	
+<script type="text/javascript">
 	let itemCatalog = document.querySelectorAll('.category-element');
 
-	for (i=0; i<itemCatalog.length; i++) {
+	for (let i=0; i<itemCatalog.length; i++) {
 		let btn = itemCatalog[i].querySelector('.category-element-btn');
+		let section = itemCatalog[i];
+	
+
+		if (section.querySelector('.category-item-list')){
+			if (section.querySelector('.category-item-list').childElementCount > 4) {
+			btn.classList.add('plus');			
+				let ColvoItem = section.querySelectorAll('.category-item');
+				for(b=0; b < ColvoItem.length; b++ ) {
+					if(b>3){
+						ColvoItem[b].style.display= "none";
+					}
+				}			
+			}			
+			else {
+			btn.classList.add('minus')}
+		} else {
+			btn.classList.add('minus');
+		}
+
 		btn.onclick = function ShowList(){
 			let thisLIst = this.parentNode.parentNode;
 			let ListItem = thisLIst.querySelectorAll('.category-item');
@@ -540,26 +568,8 @@
 					return false;		
 					}
 		}
-
-
-		let Colvo = itemCatalog[i].querySelector('.category-item-list');
-
-		if(Colvo.childElementCount > 4) {
-			btn.classList.add("plus");			
-			let ColvoItem = Colvo.querySelectorAll('.category-item');
-				for(b=0; b < ColvoItem.length; b++ ) {
-					if(b>3){
-						ColvoItem[b].style.display= "none";
-					}
-				}					
-			} else {			
-				btn.classList.add("minus");
-			}
 	}
-
 </script>
-	
-
 
 
 
