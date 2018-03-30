@@ -14,8 +14,7 @@
 	overflow: hidden
 	background-color: #fff
 	border: 1px solid #eee
-	//box-shadow: 0 0 3px rgba(122,122,122,.5)
-	//border-radius: 3px
+
 .product_photo-img-link
 	position: relative
 	display: table-cell
@@ -47,17 +46,23 @@
 	line-height: 74px
 
 .product_stick-lebel
-	display: block
-	position: absolute
-	background: linear-gradient(to right, #c8c8ce 1%, #a7a7aa 94%,#7c7d7f 100%)
-	top: 15px
-	right: -0
-	padding: 3px 15px
-	background-color: $gray
-	font-size: .95em
-	text-transform: uppercase
-	color: #fff
-	text-shadow: 0px 1px 0 $darck
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: flex-end
+  position: absolute
+  top: 15px
+  right: -0
+
+.product_stick-lebel-item
+  background: linear-gradient(to right, #c8c8ce 1%, #a7a7aa 94%,#7c7d7f 100%)
+  background-color: $gray
+  font-size: .95em
+  text-transform: uppercase
+  color: #fff
+  text-shadow: 0px 1px 0 $darck
+  padding: 3px 15px
+  margin-bottom: 2px
 
 .product_photo-prew-list
 	width: 100%
@@ -213,11 +218,6 @@
 	&:hover 
 		color: $accent
 		ransition: 0.25s all
-
-
-
-
-
 .product_info-preview
 	width: 100%
 	font-size: .95em
@@ -375,15 +375,14 @@
 		margin-top: 3px
 		padding-right: 5px
 	dt
-		max-width: 60%
 		text-align: right
-	dd 
-		max-width: 39%
+	dd 		
 		text-align: left
 		margin-bottom: 0
 .dots
-	flex-grow: 1
-	border-bottom: 1px dotted #dee0ee
+  flex-grow: 1
+  flex-shrink: 2
+  border-bottom: 1px dotted #dee0ee
 
 
 
@@ -425,31 +424,6 @@
 		display: none
 	&:hover
 		background-color: $gray
-		&:after, 
-		&:before 
-			top: 100%
-			left: 50%
-			border: solid transparent
-			content: " "
-			height: 0
-			width: 0
-			position: absolute
-			pointer-events: none
-			transition: all 0.15s ease 0s
-
-		&:after 
-			border-color: rgba(0, 0, 0, 0)
-			border-top-color: $gray
-			border-width: 10px
-			margin-left: -10px
-			transition: all 0.15s ease 0s
-
-		&:before 
-			border-color: rgba(74, 245, 96, 0)
-			border-top-color: $gray
-			border-width: 11px
-			margin-left: -11px
-			transition: all 0.15s ease 0s
 
 .tab_btn-active
 	background-color: $gray
@@ -502,6 +476,77 @@
 	border: 1px solid #eee
 	border-radius: 3px
 	padding: 4px
+
+
+
+.product_doc
+	width: 100%
+	margin-bottom: 5px
+	a 
+		width: 100%
+		display: block
+		background-repeat: no-repeat
+		padding-left: 50px 
+		text-decoration: none
+		padding-top: 3px
+		padding-bottom: 3px
+	a:hover 
+		strong
+			text-decoration: underline
+	span 
+		font-size: .9em
+		font-style: italic
+		color: $darck
+
+	a[href$=".doc"],
+	a[href$=".docx"],
+	a[href$=".rtf"] 
+		background: url("../img/icon/doc.svg")
+		background-repeat: no-repeat
+	a[href$=".pdf"] 
+		background: url("../img/icon/pdf.svg")
+		background-repeat: no-repeat
+
+
+	a[href$=".xls"],
+	a[href$=".xlsx"] 
+		background: url("../img/icon/xls.svg")
+		background-repeat: no-repeat
+		
+	strong 
+		display: block
+
+	i 
+		font-size: .9em
+		color: $gray
+
+.vulkan_s
+  border-collapse: collapse
+  width: 100%
+  font-size: .95em
+  margin-top: 20px
+  margin-bottom: 20px	
+  th
+    background-color: #e0e0e1
+    border: 1px solid #ddd
+    padding: 3px 10px		
+  td 
+    border: 1px solid #ddd
+    padding: 3px 10px
+.vezuviy_tabl
+  border-collapse: collapse
+  border: 1px solid #ddd
+  width: 100%
+  margin-top: 30px	
+  tr:first-child 
+    background-color: #e0e0e1
+    text-align: center
+    font-size: .95em
+    font-weight: bold	
+  td
+    border: 1px solid #ddd
+    padding: 5px
+    font-size: .95em
 
 
 
@@ -563,3 +608,6 @@
 +media-breakpoint-down(xs)
 	.product_photo-img-link img
 		width: 100%
+
+
+	

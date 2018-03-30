@@ -46,9 +46,9 @@
 	</nav>
 </div>
 <header class="container-fluid">
-	<div class="container">
+	<div class="container">		
 		<div class="head_wrap">
-			<div class="head_logo">
+			<div class="head_logo head_logo-hover">
 				<div class="head_logo-img" style="cursor: pointer">		
 					<?xml version="1.0" encoding="utf-8"?>
 						<svg version="1.1"
@@ -183,14 +183,12 @@
 
 
 <div class="container">
-	<h1 class="main_title">Печи-камины Этна</h1>
+	<h1 class="main_title">Статьи о печах и каминах</h1>
 
 	<div class="breadcrumb">
 		<ul class="breadcrumb-list">
 			<li class="breadcrumb-item"><a href="#">Главная<i class="fa fa-caret-right"></i></a></li>
-			<li class="breadcrumb-item"><a href="#">Каталог<i class="fa fa-caret-right"></i></a></li>
-			<li class="breadcrumb-item"><a href="#">Печи-камины<i class="fa fa-caret-right"></i></a></li>
-			<li class="breadcrumb-item">Печи-камины Этна</li>
+			<li class="breadcrumb-item">Статьи о печах и каминах</li>
 		</ul>
 	</div>
 </div>
@@ -198,11 +196,9 @@
 <!--  КАТАЛОГ   -->
 <div class="container">
 	<div class="row">
-
 	<div class="col-lg-3">
-
 		<ul class="leftMenu">
-			<li class="leftMenu-item leftMenu-item-marker"><a href="#">Топки и облицовки</a>
+			<li class="leftMenu-item--active leftMenu-item-marker--active"><a href="#">Топки и облицовки</a>
 				<ul class="leftMenu-item-list">
 					<li class="leftMenu-item-2">
 						<a href="#">Камины в талькомагнезите</a>
@@ -245,289 +241,38 @@
 	</div>
 
 	
-    <!-- Карточка товара -->
-	<div class="col-lg-9 product">
-		<div class="row">
-			
-			<!-- Блок с изображениями -->
-			<div class="col-md-6 product_photo">
-				<div class="product_photo-img-wrap">
-					<a href="img/imgdel/tovar/1.jpg" class="product_photo-img-link" onclick="return false">
-						<img src="/img/imgdel/tovar/1.jpg" id="product_photo" alt="Печь камин" title="Печь камин">
-
-          <span class="product_stick-lebel">
-            <span class="product_stick-lebel-item">Новинка</span>
-         <!--   <span class="product_stick-lebel-item">Лидер продаж</span>
-            <span class="product_stick-lebel-item">Спецпредложение</span>   -->
-					</span>	
+    <!-- Контентная часть -->
+	<div class="col-lg-9 category">		
+    <div class="search-page">
 
 
-
-
-						<div class="product_stick-disc">-10%</div>
-					</a>					
-				</div>
-				<ul class="product_photo-prew-list">
-					<span class="product_photo-prew-img" style="background-image:url('/img/imgdel/tovar/1.jpg')"></span>
-					<span class="product_photo-prew-img" style="background-image:url('/img/imgdel/tovar/3.jpg')"></span>
-					<span class="product_photo-prew-img" style="background-image:url('/img/imgdel/tovar/4.jpg')"></span>
-					<span class="product_photo-prew-img" style="background-image:url('/img/imgdel/tovar/5.jpg')"></span>
-					<span class="product_photo-prew-img" style="background-image:url('/img/imgdel/tovar/6.jpg')"></span>					
-				</ul>				
-			</div>
-			<div class="product_photo-modal" id="productModal" style="display: none;">
-				<div class="product_photo-modal-closed"><span class="product_photo-modal-closed-btn" id="btnModalClosed">&times;</span></div>
-				<div class="product_photo-modal-wrap">					
-					<div class="product_photo-modal-left"><span class="product_photo-modal-left-btn" id="btnModalLeft"></span></div>
-						<div class="product_photo-modal-wrap-photo">	
-							<img src="img/imgdel/tovar/1.jpg" id="modalImg" class="product_photo-modal-img">
-						</div>
-					<div class="product_photo-modal-right"><span class="product_photo-modal-right-btn" id="btnModalRigth"></span></div>
-				</div>				
-			</div>
-			<!-- END Блок с изображениями -->
-
-		<div class="col-md-6">
-			<div class="product_info-preview">
-				<p>Чугунная печь для бани Везувий Легенда Ковка 16 (205), с дверцей с жаропрочным стеклом Везувий 205, отапливает парную объемом  8 - 18 м<sup>3</sup>.</p>		
-			</div>
-			<div class="product_info-price-wrap">
-				<div class="product_info-price-block">
-          <!--
-          <span class="product_info-price-null">Цена по запросу</span>  -->
-          
-					<span class="product_info-price-old">35 000 руб.</span>
-					<span class="product_info-price-new">Цена: 32 030 руб.</span> 
-				</div>
-			</div>
-			<span class="product_info-price-profit">Ваша экономия: 2 070 руб.</span>
-
-
-			
-				<form action="#" method="post"  сlass="add_form">
-					<div class="product_info-buy-wrap">
-					<div class="product_info-buy-form">
-						<a href="javascript:void(0)">-</a>
-	                        <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
-	                    <a href="javascript:void(0)">+</a>
-	                </div>
-					<input type="hidden" name="Nan">
-					<input type="hidden" name="none">
-					<!--
-					<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">  -->
-					<input type="submit" name="name-btn"  class="product-buy-btn" value="Купить">
-					<button data-module="buyoneclick" data-id="777" class="product-buy-btn" >Купить в 1 клик</button>
-					</div>
-
-				</form>
-				
-			<div class="product_gift">
-				<h3>Подарок к покупке</h3>
-				<div class="product_gift-wrap">
-					<div class="product_gift-img">
-						<img src="img/imgdel/tovar/drova.jpg">
-					</div>
-					<div class="product_gift-txt">
-						<ul>
-							<li>Упаковка сухих дров;</li>
-							<li>Бесплатное хранение до 6 месяцев;</li>
-							<li>Гарантия лучшей цены;</li>
-							<li>Скидка 20% на комплект дымохода.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="product_property">			
-				<dl><dt>Код товара:</dt><span class="dots"></span><dd>   23464</dd></dl>
-				<dl><dt>Производитель:</dt><span class="dots"></span><dd>    JOTUL</dd></dl>
-				<dl><dt>Страна производства:</dt><span class="dots"></span><dd>  Норвегия</dd></dl>
-				<dl><dt>Высота (мм):</dt><span class="dots"></span><dd>  707</dd></dl>
-				<dl><dt>Ширина (мм): </dt><span class="dots"></span><dd>   577</dd></dl>
-				<dl><dt>Глубина (мм): </dt><span class="dots"></span><dd>   484</dd></dl>
-				<dl><dt>Диаметр дымохода (мм): </dt><span class="dots"></span><dd>  150</dd></dl>
-				<dl><dt>Гарантия производителя: </dt><span class="dots"></span><dd>  25 лет</dd></dl>
-				<dl><dt>Мощность (кВт)</dt><span class="dots"></span><dd> 25</dd></dl>
-				<dl><dt>Вес (кг): </dt><span class="dots"></span><dd> 106</dd></dl>					
-			</div>
-		</div><!-- END ROW IMG and INFO -->
-
-
-		<div class="col product_description">
-			<div class="tab_btn-wrap">
-				<div class="tab_btn tab_btn-active"><a><i class="fa fa-file-text"></i>Описание</a></div>
-				<div class="tab_btn"><a><i class="fa fa-file"></i>Документация</a></div>
-				<div class="tab_btn"><a><i class="fa fa-file-video-o"></i>Видео</a></div>
-			</div>
-
-			<div class="product_description-tab" style="display: block;">
-				<p>Чугунная печь для бани Везувий Легенда Ковка 16 (205), с дверцей с жаропрочным стеклом Везувий 205, отапливает парную объемом 8 - 18 м3.</p>
-				<p>Преимущество печи в том, что топка печи состоит из 3-х элементов. На стыке между ними используется керамический шнур с рабочей температурой 1200 градусов. То есть топка печи абсолютно герметична! Для фиксации деталей между собой применяется болтовое соединение, что даёт 100% гарантию безопасности при эксплуатации.</p>
-				<h3>Преимущества покупки печи камина JOTUL</h3>
-				<p>Банная чугунная печь Легенда Ковка 16 (205) укомплектована чугунной герметичной дверцей Везувий 205 с жаропрочным стеклом «SHOT ROBAX». Конвекционно-вентилируемый кожух "Ковка" изготовлен из металлической текстурированной полосы покрашенной термостойкой краской и покрытая патиной «Бронза».</p>
-				<h4>Преимущества покупки печи камина JOTUL</h4>
-				<ul>
-					<li>Упаковка сухих дров;</li>
-					<li>Бесплатное хранение до 6 месяцев;</li>
-					<li>Гарантия лучшей цены;</li>
-					<li>Скидка 20% на комплект дымохода.</li>
-				</ul>
-			</div>
-
-			<div class="product_description-tab">
-				<h3>Документация к пчам каминам JOTUL</h3>
-				<p>Скачать документацию к продукции JOTUL GROUP вы мжете на этой странице</p>
-			</div>
-
-			<div class="product_description-tab">
-				<div class="product_description-tab-video">
-					<div class="video-responsive">
-						<iframe src="https://www.youtube.com/embed/xevh27ud3Sw" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-
-<!--
-	<section class="col-12 recomend">
-		<h2 class="recomend-title">Сопутствующие товары:</h2>
-		<div class="recomend-wrap">
-			
-			<div class="recomend-item" onclick="location.href='/';">
-				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop1.jpg')"></div>
-				<div class="recomend-name">
-					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Дымоходы Schiedel</span></a></h3>		
-				</div>
-			</div>
-
-			<div class="recomend-item" onclick="location.href='/';">
-				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop2.jpg')"></div>				
-				<div class="recomend-name">
-					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Материалы для монтажа</span></a></h3>		
-				</div>
-			</div>
-
-			<div class="recomend-item" onclick="location.href='/';">
-				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop3.jpg')"></div>				
-				<div class="recomend-name">
-					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Баки для банни</span></a></h3>		
-				</div>
-			</div>	
-
-			<div class="recomend-item" onclick="location.href='/';">
-				<div class="recomend-img" style="background-image:url('img/imgdel/tovar/sop4.jpg')"></div>				
-				<div class="recomend-name">
-					<h3><a href="/catalog/schiedel/" class="recomend-link"><span>Камни для банни</span></a></h3>		
-				</div>
-			</div>
-		
-		</div>
-	</section>
-
--->
-	<section class="col-12 offer">
-		<h2 class="offer_title">Похожие товары:</h2>
-		
-		<div class="elements_wrap">	
-
-			<div class="element_item-wrap">
-				<div class="element">
-					<div class="element_img-wrap">
-						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-1.jpg')"></a>
-					</div>
-					<h3 class="element-title"><a href="#">Везувий Легенда Стандарт 12 (261)</a></h3>
-
-					<div class="element_add-wrap">
-						<div class="element_add-prise-wrap">							
-							<div class="catalog_add-prise-prise">15 860 руб.</div>						
-						</div>
-						<div class="element_add-buy">
-							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
-						</div>
-					</div>
-				</div>
-			</div>
-		
-
-
-			<div class="element_item-wrap">
-				<div class="element">
-					<div class="element_img-wrap">
-						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-2.jpg')">							
-						<span class="element-lebel">Новинка</span>
-						</a>
-
-					</div>
-					<h3 class="element-title"><a href="#">Везувий Легенда Ковка 22 (217)</a></h3>
-
-					<div class="element_add-wrap">
-						<div class="element_add-prise-wrap">
-							<div class="catalog_add-prise-prise">30 950 руб.</div>													
-						</div>
-						<div class="element_add-buy">
-							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-	
-
-			<div class="element_item-wrap">
-				<div class="element">
-					<div class="element_img-wrap">
-						<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-3.jpg')">
-							<div  class="element_disc">-12%</div>
-							
-
-						</a>
-					</div>
-					<h3 class="element-title"><a href="#">Везувий Легенда Стандарт 16 (ДТ-4С)</a></h3>
-
-					<div class="element_add-wrap">
-						<div class="element_add-prise-wrap">							
-							<div class="catalog_add-prise-prise">182 196 руб.</div>
-							<span class="catalog_add-prise-sale">214 349 руб.</span>						
-						</div>
-						<div class="element_add-buy">
-							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-			<div class="element_item-wrap">
-				<div class="element">
-					<div class="element_img-wrap">
-						<div class="element_img-link">
-							<a href="#" class="element_img-link" style="background-image: url('/img/imgdel/tovar/prew-4.jpg')"></a>
-						</div>
-					</div>
-					<h3 class="element-title"><a href="#">Везувий Легенда Ковка 28 (270)</a></h3>
-
-					<div class="element_add-wrap">
-						<div class="element_add-prise-wrap">							
-							<div class="catalog_add-prise-prise">192 914 руб.</div>
-							<span class="catalog_add-prise-sale">214 349 руб.</span>						
-						</div>
-						<div class="element_add-buy">
-							<input type="submit" class="element_add-buy-btn" name="buy" value="Купить">
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
+      <form action="" method="get" class="search-page-form">
+        <input type="text" name="q" value="Везувий Легенда 205"  class="search-page-form-txt"> &nbsp;
+        <select name="where" class="search-page-form-cat">
+          <option value="">(везде)</option>
+          <option value="iblock_catalog">Каталог</option>
+        </select>
+        &nbsp;
+        <input type="submit" value="Искать" class="search-page-form-btn">
+        <input type="hidden" name="how" value="r">
+      </form>
 
 
 
 
 
-		</div><!-- END ROW -->	
+
+  </div>
+
+
+
+
+
+
+
+
+
+
 	</div>
 	<!-- END Карточка товара -->
 		
@@ -536,114 +281,6 @@
 
 	</div><!-- END ROW СТРАНИЦА-->	
 </div>
-
-
-<script type="text/javascript">
-// Галерея - изображения товаров
-
-    let imgPrew = document.getElementsByClassName('product_photo-prew-img');
-    let product_photo = document.getElementById('product_photo');
-    let mainImg;
-    let modalImg;
-    let imgMainPathNew;
-    let productModal;   
-    let btnModalLeft = document.getElementById('btnModalLeft'); 
-    let btnModalRigth = document.getElementById('btnModalRigth');
-    let btnModalClosed = document.getElementById('btnModalClosed');
-    let ImgMas = [];
-    let Count;
-
-    function fileName(fullPath) {
-        return ('' + fullPath).replace(/url\(\"/i, '').replace(/\"\)/i, '');
-        }
-    for(let i=0; i< imgPrew.length; i++ ) {
-        imgPrew[i].onclick = function(){            
-            imgMainPath= fileName(imgPrew[i].style.backgroundImage);                
-            product_photo.src= imgMainPath         
-        };
-    }
-    product_photo.onclick = function(){
-        productModal = document.getElementById('productModal'); 
-        productModal.style.display = "block";
-        mainImg = product_photo.getAttribute('src');
-        modalImg = document.getElementById('modalImg');
-        modalImg.setAttribute('src', mainImg);
-        
-        for(let i=0; i< imgPrew.length; i++ ) {
-            ImgMas[i]= fileName(imgPrew[i].style.backgroundImage);
-        }
-
-        for(let i=0; i<ImgMas.length; i++ ) {           
-            if(mainImg==ImgMas[i]){
-                Count = i; 
-                return false;
-            }
-        }       
-    }
-    btnModalClosed.onclick = function(){        
-        productModal.style.display = "none";
-    }
-    btnModalRigth.onclick = function () {
-        if(Count < ImgMas.length-1){ 
-            Count++;   
-            modalImg.setAttribute('src', ImgMas[Count]); 
-            return false; 
-        }  
-        if(Count >= ImgMas.length-1){
-            Count=0;            
-            modalImg.setAttribute('src', ImgMas[Count]); 
-        }
-    }
-    btnModalLeft.onclick = function () {        
-        if(Count <= 0){
-            Count= ImgMas.length-1;
-            modalImg.setAttribute('src', ImgMas[Count]);
-            return false;           
-        }
-        if(Count <= ImgMas.length-1){
-            Count--;            
-            modalImg.setAttribute('src', ImgMas[Count]);
-        }   
-    }
-
-// Табы - страница товаров
-    let tabBtn = document.querySelector(".tab_btn-wrap");
-    tabBtn.onclick = function(event){
-        let target = event.target.parentElement;
-        let contentTab = document.querySelectorAll(".product_description-tab");
-        let tabBtnAll = tabBtn.children;
-        if(target.classList.contains("tab_btn")) {
-            for(let i=0; i< tabBtn.children.length; i++ ){
-                if(tabBtnAll[i] == target) {
-                    if (!tabBtnAll[i].classList.contains("tab_btn-active")){
-                        tabBtnAll[i].classList.add('tab_btn-active');
-                    }   
-                    contentTab[i].style.display='block';
-                } else {
-                    contentTab[i].style.display='none';
-                    if (tabBtnAll[i].classList.contains("tab_btn-active")){
-                        tabBtnAll[i].classList.remove('tab_btn-active');
-                    }   
-                }           
-            };
-        };
-    }
-
-	
-
-	
-</script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

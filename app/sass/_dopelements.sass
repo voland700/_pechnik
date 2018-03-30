@@ -1,0 +1,63 @@
+@import "vars"
+
+.search-page-form
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  flex-wrap: wrap
+  font-size: 1em
+  color: $darck
+ 
+
+.search-page-form-txt
+  flex-basis: 50%
+  background-color: #fff
+  font-style: italic
+  padding-left: 10px
+  border: 1px solid $gray
+  &[value] 
+    color: $darck
+
+.search-page-form-cat
+  border: 1px solid $gray
+  color: $darck 
+  padding: 1px 3px
+
+.search-page-form-btn
+  background-color: $gray
+  border: 1px solid darken($gray, 3%)
+  color: #fff
+  padding: 1px 10px
+  cursor: pointer
+  &:hover 
+    background-color: darken($gray, 10%)
+    transition: .3s 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
++media-breakpoint-down(md)
++media-breakpoint-down(sm)
+  .search-page-form
+    width: 100%
+  .search-page-form-txt
+    flex-grow: 1  
++media-breakpoint-down(xs)
+  .search-page-form
+    //justify-content: space-between  
+  .search-page-form-txt
+    flex-basis: 100%
+    margin-bottom: 5px
