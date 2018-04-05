@@ -1,0 +1,181 @@
+@import "vars"
+
+.list_block
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  flex-wrap: wrap
+  border-radius: 3px  
+  margin-bottom: 15px
+
+.list-wrap
+  width: 25%
+  background-color: darken($body, 10%)
+  padding: 3px
+  transition: 1s all
+  &:hover
+    background-color: darken($body, 15%)
+    .list-item
+      box-shadow: 0 0 5px rgba(122, 122, 122, .7)
+    .list_img-img
+      filter: grayscale(25%)
+      filter: opacity(90%)
+    .list_title a 
+      color: darken($darck, 5%)
+      text-decoration: none
+.list-item
+  width: 100%
+  background-color: #fff
+  border-radius: 3px
+  box-shadow: 0 0 1px rgba(122, 122, 122, .4)
+.list_img-wrap
+  width: 100%
+  padding: 5px
+  height: 170px
+  display: table
+  margin: 0px
+  padding: 0px
+  position: relative
+  cursor: pointer
+
+.list_img-link
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  margin: 0px
+  padding: 3px 0 0 0
+.list_img-img
+  width: auto
+  max-width: 160px
+  height: auto
+  max-height: 160px
+.list_disc
+  position: absolute
+  bottom: -7px
+  right: 5px
+  display: block
+  width: 50px
+  height: 50px
+  background: url(../img/stick_disc.png) no-repeat center
+  -webkit-background-size: 50px 50px
+  background-size: 50px 50px
+  color: #fff
+  text-align: center
+  text-shadow: 0 1px 0 #ba3434
+  font-weight: 700
+  font-size: 1.1em
+  line-height: 50px
+.list_lebel-wrap
+	display: block
+	position: absolute	
+	top: 7px
+	right: -1px
+
+.list_lebel
+  display: flex
+  flex-direction: column-reverse
+  padding: 0 10px 
+  font-size: .9em
+  text-transform: uppercase
+  color: #fff
+  text-shadow: 0 1px 0 $darck
+  margin-bottom: 2px
+.list_lebel-hit
+  background: #9440d5
+  background: linear-gradient(90deg, rgba(148,64,213,1) 0%, rgba(153,66,219,1) 87%, rgba(107,46,153,1) 100%)
+.list_lebel-new   
+  background:#BFA330
+  background: linear-gradient(90deg, rgba(191,163,48,1) 0%, rgba(204,173,51,1) 85%, rgba(156,132,39,1) 100%)
+
+.list_title
+  font-size: .95em
+  font-weight: 500
+  text-align: center
+  line-height: 1.25
+  margin-bottom: 1px
+  a 
+    width: 100%
+    display: block
+    color: $darck
+    text-align: center
+    padding: 5px 7px
+
+.list_buy-wrap
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  background-color: $darck
+  height: 53px
+  padding: 7px
+.list_price-wrap
+
+.list_price
+  line-height: 1
+  font-size: 1em
+  color: #fff
+  font-weight: 500
+  margin-bottom: 5px
+.list_price-old
+  line-height: 1
+  font-size: .85em
+  color: #fc0
+  text-decoration: line-through
+.list_buy
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+  .list_img-wrap
+    height: 160px 
+  .list_img-img
+    max-width: 160px
+    max-height: 160px
+  .list_title
+    font-size: .9em
++media-breakpoint-down(md)
+  .list_img-wrap
+    height: 155px 
+  .list_img-img
+    max-width: 155px
+    max-height: 155px
++media-breakpoint-down(sm) 
+  .list-wrap
+    width: 50%
+  .list_img-wrap
+    height: 190px 
+  .list_img-img
+    max-width: 180px
+    max-height: 180px
+  .list_title
+    font-size: .95em
+@media only screen and (max-width : 500px)
+  .list_img-wrap
+    height: 170px 
+  .list_img-img
+    max-width: 170px
+    max-height: 170px
+@media only screen and (max-width : 450px)
+  .list_img-wrap
+    height: 160px 
+  .list_img-img
+    max-width: 160px
+    max-height: 160px
+@media only screen and (max-width : 410px)
+  .list_img-wrap
+    height: 155px 
+  .list_img-img
+    max-width: 155px
+    max-height: 155px
+  .list_price
+    font-size: .97em
+@media only screen and (max-width : 365px)
+  .list-wrap
+    width: 100%
+  .list_img-wrap
+    height: 225px 
+  .list_img-img
+    max-width: 220px
+    max-height: 220px
+  .list_price
+    font-size: 1.1em
++media-breakpoint-down(xs)
