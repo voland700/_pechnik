@@ -44,6 +44,40 @@
 	a 
 		color:  $darck
 		font-style: italic
+.works_item
+  margin-bottom: 25px
+  h2 
+    font-size: 25px
+    margin-bottom: .8rem    
+
+.works_item-link
+  display: block
+  color: $darck
+  transition: all .3s
+  &:hover
+    color: darken($darck, 2%)
+
+.works_back
+  color: $darck
+  font-style: italic
+  opacity: .9
+  transition: .3s
+  i 
+    margin-right: 7px
+  &:hover 
+    color: $darck
+    opacity: 1
+
+
+
+
+
+
+
+
+
+
+
 
 +media-breakpoint-down(xl)
 +media-breakpoint-down(lg)
@@ -58,7 +92,9 @@
 	.examples-list-item 
 		max-width: 20%
 	.examples-list-img
-		width: 100%			
+		width: 100%
+  .works_item-link
+    line-height: 1.2			
 +media-breakpoint-down(xs)
 	.examples-item 
 		max-width: 25%
