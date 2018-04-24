@@ -1,7 +1,10 @@
 @import "vars"
 
 .install_link
+  margin-bottom: 25px
 .install_link-title
+  line-height: 1.3
+  margin-bottom: 15px
 .install_link-wrap
   display: flex
   flex-direction: row
@@ -12,7 +15,7 @@
   width: 190px
   display: block  
   box-sizing: border-box
-  padding: 10px
+  padding: 8px 10px
   border: 1px solid #ccc
   border-radius: 3px
   background-color: #FFCC00
@@ -26,3 +29,216 @@
     text-decoration: none
     border: 1px solid #C8C8CE
     box-shadow: 0 0 6px rgba(122, 122, 122, 0.8)
+
+.install_kind
+  margin-bottom: 25px
+.install_kind-title
+
+.install_kind-item
+  margin-bottom: 30px
+  img 
+    width: 100%
+    height: auto
+    padding: 4px
+    line-height: 1.42857143
+    background-color: #fff
+    border: 1px solid #ddd
+    border-radius: 4px
+    transition: all .2s ease-in-out
+.install_kind-name
+  margin-top: -2px
+  background-color: #fff
+  padding: 7px 10px
+  text-align: center
+  font-size: 15px
+  line-height: 1.2
+  color: #333
+  border: 1px solid #ddd
+  border-radius: 4px
+
+.install_why
+  line-height: 1.42857143
+  background: #fff
+  border: 1px solid #ddd
+  border-radius: 4px
+  padding: 15px
+  margin-bottom: 35px
+.install_why-titlebad
+  color: red
+.install_why-titlegood
+  color: green
+.install_why-bed,
+.install_why-good
+  position: relative
+  padding-left: 35px
+  font-size: 1em
+  font-style: italic
+.install_why-bed::before
+  content: "✔"
+  position: absolute
+  left: 15px
+  top: 0
+  color: red
+.install_why-good::before
+  content: "✔"
+  position: absolute
+  left: 15px
+  top: 0
+  color: green
+
+.install_advantage
+  margin-bottom: 25px
+.install_advantage-title
+  line-height: 1.3
+  margin-bottom: 15px
+.install_advantage-item
+  margin-bottom: 15px
+  img 
+    margin-bottom: 8px
+.install_advantage-txt
+  text-align: center
+  p 
+    font-size: .95em
+    line-height: 1.4
+
+
+.install_success 
+  margin-bottom: 20px 
+.install_success-title
+  margin-bottom: 15px
+  line-height: 1.3
+.install_success-item
+  img 
+    width: 90%
+    margin-bottom: 10px
+  p 
+    font-size: .9em
+    line-height: 1.2
+    text-align: center
+    hyphens: auto
+
+.img-circle
+  border-radius: 50%
+.center-block
+  display: block
+  margin-right: auto
+  margin-left: auto
+  font-style: italic
+
+.install_ourWork
+  margin-bottom: 25px
+
+
+.install_comments
+  margin-bottom: 25px
+.install_comments-title
+  line-height: 1.3
+  margin-bottom: 15px
+.install_comments-wrap
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-content: flex-start
+  width: 100%
+.install_comments-item
+  display: flex
+  flex-direction: row  
+  justify-content: space-between
+  width: 100%
+  margin-bottom: 15px
+.install_comments-autor
+  flex-grow: 0
+  img 
+    width: 120px
+    height: auto
+    margin-bottom: 7px
+  p 
+    font-size: .85em
+    font-weight: 500
+    font-style: italic
+    line-height: 1.2
+    text-align: center    
+.install_comments-txt
+  flex-shrink: 1
+  display: inline-block
+  padding: 15px
+  line-height: 1.42857143
+  background-color: #fff
+  border: 1px solid #ddd
+  border-radius: 5px
+  text-indent: 25px
+
+.install_comments-item:nth-child(odd)
+  .install_comments-autor
+    order: 1
+  .install_comments-txt
+    order: 2
+    margin-left: 15px
+
+.install_comments-item:nth-child(even) 
+  .install_comments-autor
+    order: 2
+  .install_comments-txt
+    order: 1
+    margin-right: 15px
+.install_scheme
+.install_scheme-title
+.install_scheme
+
++media-breakpoint-down(xl)
+
++media-breakpoint-down(lg)
+  .install_link-item
+    width: 165px
+    font-size: 14px
+  .install_comments-item
+    width: 100%
+  .hidden-lg-none
+    display: none
++media-breakpoint-down(md)
+  .install_link-wrap
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
++media-breakpoint-down(sm)
+  .install_why
+    margin-left: 15px
+    margin-right: 15px
+  .install_success-item
+    img 
+      width: 170px
+    .install_success-item p
+      font-size: 1em
+  .hidden-sm-none
+    display: none
+  .install_link-item
+    width: 180px
+    font-size: 16px
+    margin-bottom: 5px
++media-breakpoint-down(xs)
+  .install_advantage
+    display: none
+  .install_success
+    display: none
+  .install_comments-item
+    flex-direction: column
+  .install_comments-autor
+    img 
+      width: 150px
+      display: block
+      margin: 15px auto
+  .install_comments-item:nth-child(odd)
+    .install_comments-autor
+      order: 1
+    .install_comments-txt
+      order: 2
+      margin-left: 0
+
+  .install_comments-item:nth-child(even) 
+    .install_comments-autor
+      order: 1
+    .install_comments-txt
+      order: 1
+      margin-right: 0
