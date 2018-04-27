@@ -3151,9 +3151,41 @@
   }; 
 </script>
 
+<div class="form__user-modal" id="formUser">
+  <div class="form__user-wrap">    
+    <section class="form__user">
+      <h3 class="form__user-title">Отправте сообщение</h3>
+      <form action="/about/contacts/" method="POST">
+        <input type="hidden" name="sessid" id="sessid" value="068e0c412dc2b21a66c9f1f116153110">
+        <div class="form__user-name-wrap">        
+          <label class="form__user-name-labl" for="user_name">Ваше имя</label>
+            <input type="text" class="form__user-name" name="user_name" value="" placeholder="Как Вас зовут?">
+        </div>
+        <div class="form__user-mail-wrap">
+          <label class="form__user-mail-libl" for="user_email">Ваш E-mail</label>
+          <input type="email" class="form__user-mail" name="user_email" value="" placeholder="Ваш e-mail">
+        </div>
+        <div class="form__user-message-wrap">
+          <label class="form__user-message-labl" for="user_email">Сообщение</label>
+          <textarea name="MESSAGE" class="form__user-message" rows="5" placeholder="Ваше сообщение"></textarea>
+        </div>
 
+        <div class="mf-captcha">
+          <div class="mf-text">Защита от автоматических сообщений</div>
+          <input type="hidden" name="captcha_sid" value="0b2e49ceeecb17cddc5dd0bd53f82ec7">
+          <img src="/bitrix/tools/captcha.php?captcha_sid=0b2e49ceeecb17cddc5dd0bd53f82ec7" width="180" height="40" alt="CAPTCHA">
+          <div class="mf-text">Введите слово на картинке
+            <span class="mf-req">*</span>
+          </div>
+          <input type="text" name="captcha_word" size="30" maxlength="50" value="">
+        </div>
 
-
+        <input type="hidden" name="PARAMS_HASH" value="bf7bdbc5bdcd0d3b76a496570247669d">
+        <input type="submit" name="submit" class="form_btn" value="Отправить">
+      </form>
+    </section>
+  </div>
+</div>
 
 
 
