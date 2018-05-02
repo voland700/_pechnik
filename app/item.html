@@ -23,7 +23,8 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
-
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -304,22 +305,30 @@
 
 
 			
-				<form action="#" method="post"  сlass="add_form">
-					<div class="product_info-buy-wrap">
-					<div class="product_info-buy-form">
-						<a href="javascript:void(0)">-</a>
-	                        <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
-	                    <a href="javascript:void(0)">+</a>
-	                </div>
-					<input type="hidden" name="Nan">
-					<input type="hidden" name="none">
-					<!--
-					<input type="submit" name="<?echo $arParams["ACTION_VARIABLE"]."BUY"?>" value="<?echo GetMessage("CATALOG_BUY")?>">  -->
-					<input type="submit" name="name-btn"  class="product-buy-btn" value="Купить">
-					<button data-module="buyoneclick" data-id="777" class="product-buy-btn" >Купить в 1 клик</button>
-					</div>
+				
+				<div class="product_info-buy-wrap">
+          
+        
+          <form action="#" method="post" class="add_form">
+            <div class="product_info-buy-order">
+	            <div class="product_info-buy-form">
+	              <a href="javascript:void(0)">-</a>
+	                  <input type="text" name="QUANTITY" value="1" id="QUANTITY<?= $arElement['ID'] ?>"/>
+	              <a href="javascript:void(0)">+</a>
+	            </div>
+            <input type="hidden" name="Nan">
+            <input type="hidden" name="none">
+            <input type="submit" name="name-btn"  class="product-buy-btn" value="Купить">
+          </div>
+          </form>
+         
+          
 
-				</form>
+          <input class="product-buy-btn-fast" type="submit" name="oneclickOrder" value="Купить в 1 клик" onclick="oneclickPopup();">
+
+			</div>
+
+		
 				
 			<div class="product_gift">
 				<h3>Подарок к покупке</h3>
@@ -543,15 +552,15 @@
 
     let imgPrew = document.getElementsByClassName('product_photo-prew-img');
     let product_photo = document.getElementById('product_photo');
+    let productModal = document.getElementById('productModal'); 
     let mainImg;
     let modalImg;
-    let imgMainPathNew;
-    let productModal;   
+    let imgMainPathNew;       
     let btnModalLeft = document.getElementById('btnModalLeft'); 
     let btnModalRigth = document.getElementById('btnModalRigth');
     let btnModalClosed = document.getElementById('btnModalClosed');
     let ImgMas = [];
-    let Count;
+    let Count;    
 
     function fileName(fullPath) {
         return ('' + fullPath).replace(/url\(\"/i, '').replace(/\"\)/i, '');
@@ -562,12 +571,11 @@
             product_photo.src= imgMainPath         
         };
     }
-    product_photo.onclick = function(){
-        productModal = document.getElementById('productModal'); 
+    product_photo.onclick = function(){        
         productModal.style.display = "block";
         mainImg = product_photo.getAttribute('src');
         modalImg = document.getElementById('modalImg');
-        modalImg.setAttribute('src', mainImg);
+        modalImg.setAttribute('src', mainImg);      
         
         for(let i=0; i< imgPrew.length; i++ ) {
             ImgMas[i]= fileName(imgPrew[i].style.backgroundImage);
@@ -578,11 +586,19 @@
                 Count = i; 
                 return false;
             }
-        }       
+        }                 
     }
+
+    window.addEventListener("keydown", function (e) {
+        if (e.keyCode == 27) {
+            productModal.style.display = 'none';
+        }
+    }, true);  
+
     btnModalClosed.onclick = function(){        
         productModal.style.display = "none";
     }
+
     btnModalRigth.onclick = function () {
         if(Count < ImgMas.length-1){ 
             Count++;   
@@ -605,6 +621,20 @@
             modalImg.setAttribute('src', ImgMas[Count]);
         }   
     }
+
+
+    /*    if (productModal.style.display == 'block') {
+
+            console.log('Применяется')
+                window.captureEvents(Event.KEYPRESS);
+                window.onkeypress = pressed;
+                function pressed(e) {
+                    if (e.which == 0) {
+                        alert('РАБОТАЕТ');
+                    }
+                }
+            }
+*/
 
 // Табы - страница товаров
     let tabBtn = document.querySelector(".tab_btn-wrap");
