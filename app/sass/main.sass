@@ -182,11 +182,14 @@ body
 	box-shadow: 0 0 6px rgba(122,122,122,.1)	
 	cursor: pointer
 	transition: .3s
+	color: $darck
 
 .btn_colme:hover
 	border: 2px solid $accent
 	box-shadow: 0 0 6px rgba(122,122,122,.8)
 	transition: .3s
+	text-decoration: none
+	color: darken($darck, 5%)
 
 
 
@@ -339,19 +342,19 @@ body
 	transition: all .2s ease-in-out
 
 .video-responsive
-  position: relative 
-  padding-bottom: 56.25% 
-  height: 0
-  overflow: hidden 
+	position: relative 
+	padding-bottom: 56.25% 
+	height: 0
+	overflow: hidden 
 
 .video-responsive iframe, 
 .video-responsive object, 
 .video-responsive embed 
-  position: absolute 
-  top: 0
-  left: 0 
-  width: 100%
-  height: 100%
+	position: absolute 
+	top: 0
+	left: 0 
+	width: 100%
+	height: 100%
 
 @import "media" // Always at the end
 @import "_search"
